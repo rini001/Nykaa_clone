@@ -4,14 +4,14 @@ export const Nav1 = () => {
   return (
     <div>
       <div className={styles.mainDiv}>
-<div>abc</div>
+        <div>abc</div>
         <div
           style={{
             display: "flex",
             columnGap: "10px",
           }}
         >
-          <div style={{display:"flex"}}  className="icon-svg">
+          <div style={{ display: "flex" }} className="icon-svg">
             <svg
               width="24"
               height="24"
@@ -27,8 +27,8 @@ export const Nav1 = () => {
             </svg>
             <span>Get App</span>
           </div>
-          
-          <div style={{display:"flex"}} className="icon-svg">
+
+          <div style={{ display: "flex" }} className="icon-svg">
             <svg
               width="24"
               height="24"
@@ -44,8 +44,8 @@ export const Nav1 = () => {
             </svg>
             <span>Store & Events</span>
           </div>
-          
-          <div style={{display:"flex"}} className="icon-svg">
+
+          <div style={{ display: "flex" }} className="icon-svg">
             <svg
               width="24"
               height="24"
@@ -61,8 +61,8 @@ export const Nav1 = () => {
             </svg>
             <span>Gift Card</span>
           </div>
-        
-          <div style={{display:"flex"}}>
+
+          <div style={{ display: "flex" }}>
             <svg
               width="24"
               height="24"
@@ -78,10 +78,8 @@ export const Nav1 = () => {
             </svg>
             <span>Help</span>
           </div>
-        
         </div>
       </div>
-      
     </div>
   );
 };

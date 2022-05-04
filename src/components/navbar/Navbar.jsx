@@ -5,11 +5,9 @@ import { Nav3 } from './Nav3'
 
 export const Navbar = () => {
   return (
-    <div>
-      {/* <div style={{position:"fixed", width:"100%",  overflow: "hidden"}}> */}
+    <div>    
       <Nav1/>
       <Nav2/>
-      {/* </div> */}
       <Nav3/>
     </div>
   )

@@ -1,58 +1,60 @@
 /* * {
     font-family: Inter, sans-serif;
 } */
-.nav3{
-    display: flex;
-    /* border-bottom:1px solid #e6dede;; */
-    justify-content: center;
-    align-items: center;
-    column-gap: 30px;
-    padding: 10px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    background-color: white;
+.nav3 {
+  display: flex;
+  /* border-bottom:1px solid #e6dede;; */
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-color: white;
 }
 .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  /* .content{
-    border: 2px solid black;
-  } */
-  .dropbtn{
-    font-size: 14px;
-    color: rgb(144, 139, 139);
-    font-weight: 500;
-    letter-spacing: -0.1px;
-    text-transform: capitalize;
-    display: inline-block;
-    vertical-align: middle;
-    border-bottom: 3px solid transparent;
-    /* width: auto; */
-  }
-  .dropdownContent {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdownContent .content {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  
-  .dropdown:hover .dropdownContent {display: block;position: fixed;}
-  
-  .dropdown:hover .dropbtn {color:  #fc2779;}
+  position: relative;
+  display: inline-block;
+}
 
-  @media only screen and (max-width: 843px) {
-    .nav3{
-        column-gap: 2px;
-        flex-wrap: wrap;
-    }
-  } 
+.dropbtn {
+  font-size: 14px;
+  color: rgb(144, 139, 139);
+  font-weight: 500;
+  letter-spacing: -0.1px;
+  text-transform: capitalize;
+  display: inline-block;
+  vertical-align: middle;
+  border-bottom: 3px solid transparent;
+  /* width: auto; */
+}
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdownContent .content {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+  position: fixed;
+}
+
+.dropdown:hover .dropbtn {
+  color: #fc2779;
+}
+
+@media only screen and (max-width: 843px) {
+  .nav3 {
+    column-gap: 2px;
+    flex-wrap: wrap;
+  }
+}
