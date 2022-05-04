@@ -1,0 +1,20 @@
+.sort1{
+  box-shadow: 0 1px 3px rgb(226 226 226 / 25%), 0 1px 2px rgb(226 226 226 / 50%);
+  border-radius: 4px;
+  background: #fff;
+  padding: 15px;;
+}
+.forMargin{
+  box-shadow: 0 1px 3px rgb(226 226 226 / 25%), 0 1px 2px rgb(226 226 226 / 50%);
+  border-radius: 4px;
+  background: #fff;
+}
+.sort3{
+  padding: 15px;
+  border-bottom: 1px solid #ebebeb;
+
+}
+.first{
+  display: flex;
+  justify-content: space-between;
+}

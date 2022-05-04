@@ -1,0 +1,90 @@
+* {
+    font-family: Inter, sans-serif;
+}
+.nav{
+    display: flex;
+    border-bottom:1px solid #e6dede;;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    background-color: white;
+   
+}
+.dropdown {
+  
+    display: inline-block;
+    position:relative;
+  }
+  .searchDiv{
+
+    border-radius: 5px;
+    width: 250px;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    background-color: #eceaebce;
+  } 
+  .dropdownContent {
+    display: none;
+    position: absolute;
+    padding: 100px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+  }
+  .dropbtn{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #03021a;
+    margin: 0 auto;
+}
+
+ .noDrop{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #03021a;
+ } 
+  .dropdownContent .content {
+  
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+
+  }
+  .acc{
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 76px;
+    vertical-align: bottom;
+    cursor: pointer;
+    
+  }
+  
+  .dropdown:hover .dropdownContent {display: flex; position:fixed; margin: auto;}
+  
+  .dropdown:hover .dropbtn {background-color: #fc2779;}
+.btn{
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 76px;
+    vertical-align: bottom;
+    cursor: pointer;  
+}
+@media only screen and (max-width: 843px) {
+    .nav{
+        column-gap: 2px;
+        display: grid;
+    }
+  }

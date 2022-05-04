@@ -1,0 +1,69 @@
+day1: navbar and applied dropdown
+day2: home page , footer and complete the dropdown
+
+
+categories.css
+
+.first {
+  /* border: 2px solid black; */
+  text-align: left;
+  padding: 10px 0px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sort {
+  /* border: 2px solid black; */
+
+  padding: 0px;
+  width: 24%;
+  /* border: 2px solid black; */
+  box-shadow: 0 1px 3px rgb(226 226 226 / 25%), 0 1px 2px rgb(226 226 226 / 50%);
+  border-radius: 4px;
+  background: #fff;
+
+}
+.sort1 {
+  display: flex;
+  /* border: 2px solid black; */
+  justify-content: flex-start;
+  margin: auto;
+}
+.sort2{
+  /* border: 2px solid black; */
+
+    padding:15px;
+}
+.sort2a{
+  /* border: 2px solid black; */
+
+  padding:15px;
+  border-bottom: 1px solid #ebebeb;
+}
+.forMargin{
+  /* border: 2px solid black; */
+  display:flexbox;
+  flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 50px;   
+    /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
+}
+.sort3{
+    display: flex;
+  /* border: 2px solid red; */
+  /* width: 100%; */
+  
+  justify-content: flex-start;
+  margin: auto;
+}
+.border-box{
+    padding: 0px;
+    width: 24%;
+    box-shadow: 0 1px 3px rgb(226 226 226 / 25%), 0 1px 2px rgb(226 226 226 / 50%);
+    border-radius: 4px;
+    background: #fff;
+    /* border: 2px solid black; */
+}
+
+
+

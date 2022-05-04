@@ -1,0 +1,78 @@
+
+.off{
+background-color: #fff;
+width: 97%;
+height: 20%;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fc2779;
+}
+.div1{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 30px;
+    justify-content: center;
+    align-items: center;
+   row-gap: 30px;
+}
+.brand{
+    background-size: auto;
+    height: 300px;
+    width: 580px;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
+.brand:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+}
+.last{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lastImg{
+    background-size: auto;
+    height: 300px;
+    width: 580px;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    background-image: url("https://images-static.nykaa.com/uploads/4f4dcf3f-f3bd-4cd8-ab8a-ac9ceeebe358.gif?tr=w-600,cm-pad_resize");
+}
+.lastImg:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+@media only screen and (max-width: 843px) {
+    .div1{
+        /* border:2px solid black; */
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns:auto auto;
+        column-gap: 25px;
+        justify-content: center;
+        align-items: center;
+       row-gap: 30px;
+    }
+    .brand{
+        background-size: auto;
+    height: 300px;
+    width: 580px;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+      width: 180px;
+    }
+  }
