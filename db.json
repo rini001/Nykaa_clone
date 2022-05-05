@@ -22,7 +22,7 @@
       "off_price": "1099",
       "discount": "20%",
       "image1": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/3/6/3605975099676_mini.jpg",
-      "brand_name": "Kiehl's",
+      "brand_name": "Kiehls",
       "id": 2,
       "quan": 1
     },
@@ -87,6 +87,7 @@
       "off_price": "1099",
       "discount": "20%",
       "image1": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/a/3/a3c4910NYCETA0000008_1.jpg",
+      "brand_name": "Cetaphil",
       "id": 7,
       "quan": 1
     },
@@ -114,6 +115,47 @@
       "image1": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/a/3/a3c4910NYCETA0000008_1.jpg",
       "brand_name": "Cetaphil",
       "id": 9,
+      "quan": 1
+    }
+  ],
+  "cartProducts": [
+    {
+      "card_title": "Cetaphil Oily Skin Cleanser",
+      "title": "Cetaphil Oily Skin Cleanser",
+      "rating": "4.2",
+      "ratingNum": "2751",
+      "price": "1295",
+      "off_price": "1099",
+      "discount": "20%",
+      "image1": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/a/3/a3c4910NYCETA0000008_1.jpg",
+      "brand_name": "Cetaphil",
+      "id": 1,
+      "quan": 1
+    },
+    {
+      "card_title": "Kiehl's Ultra Facial Cleanser",
+      "title": "Kiehl's Ultra Facial Cleanser",
+      "rating": "4.2",
+      "ratingNum": "2751",
+      "price": "1295",
+      "off_price": "1099",
+      "discount": "20%",
+      "image1": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/3/6/3605975099676_mini.jpg",
+      "brand_name": "Kiehls",
+      "id": 2,
+      "quan": 1
+    },
+    {
+      "card_title": "Ponds Bright Beauty Mineral Clay Vitamin B3 Oil Free Glow & Facial Foam(90gm)",
+      "title": "Ponds Bright Beauty Mineral Clay Vitamin B3 Oil Free Glow & Facial Foam(90gm)",
+      "rating": "4.2",
+      "ratingNum": "2751",
+      "price": "1295",
+      "off_price": "1099",
+      "discount": "20%",
+      "image1": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/7/6/76764c28901030806339_0.jpg",
+      "brand_name": "Ponds",
+      "id": 8,
       "quan": 1
     }
   ]

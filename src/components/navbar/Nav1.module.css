@@ -7,7 +7,7 @@
     background-image: url(https://adn-static1.nykaa.com/media/wysiwyg/2021/common-strip.jpg);
     background-repeat: no-repeat;
     background-position: center center;    
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
 }
 @media only screen and (max-width: 843px) {

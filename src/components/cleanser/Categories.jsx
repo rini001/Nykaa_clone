@@ -48,9 +48,9 @@ export const Categories2 = () => {
     var arr = [];
     for (var checkbox of option) {
       if (checkbox.checked) {
-        for (let i = 1; i < data.length; i++) {
+        for (let i = 0; i < data.length; i++) {
           if (data[i].brand_name === checkbox.value) {
-            arr.push(data[i]);
+            arr.unshift(data[i]);
             // console.log(arr)
           }
         }
@@ -78,24 +78,16 @@ export const Categories2 = () => {
               <input type="checkbox" name="category" value="Cetaphil" />
             </div>
             <div className="first">
-              <label htmlFor="Straighteners">Name</label>
-              <input type="checkbox" />
+              <label htmlFor="Straighteners">Keihl's</label>
+              <input type="checkbox" name="category" value="Kiehls" />
             </div>
             <div className="first">
-              <label htmlFor="Straighteners">Customer Top Rated</label>
-              <input type="checkbox" />
+              <label htmlFor="Straighteners">Clinique</label>
+              <input type="checkbox" name="category" value="Clinique" />
             </div>
             <div className="first">
-              <label htmlFor="Straighteners">New Arrivals</label>
-              <input type="checkbox" />
-            </div>
-            <div className="first">
-              <label htmlFor="Straighteners">Price : High to Low</label>
-              <input type="checkbox" />
-            </div>
-            <div className="first">
-              <label htmlFor="Straighteners">Price : Low to High</label>
-              <input type="checkbox" />
+              <label htmlFor="Straighteners">Lakme</label>
+              <input type="checkbox" name="category" value="Lakme" />
             </div>
           </div>
         </Toggle2>

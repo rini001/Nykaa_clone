@@ -1,32 +1,50 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import styles from "./Nav2.module.css";
 import { NykaaFashion } from "./NykaaFashion";
-
+import { SearchData } from "../../Data/SearchData";
+import { Link } from "react-router-dom";
+import { Contexts } from "../../contexts/Contexts";
+import { useSelector } from "react-redux";
 export const Nav2 = () => {
+  const [filterData, setFilterdata] = useState([]);
+  const handleFilter = (e) => {
+    const searchWord = e.target.value;
+    const newFilter = SearchData.filter((val) => {
+      return val.product_name.includes(searchWord);
+    });
+    setFilterdata(newFilter);
+  };
+  const cartProducts = useSelector((state) => state.cartProducts);
+  const { handleshowBag } = useContext(Contexts);
   return (
     <div>
+      {/*  Main Navbar Div */}
       <div className={styles.nav}>
-        <div>
-          {" "}
-          <img
-            src="https://cdn.iconscout.com/icon/free/png-256/nykaa-3384872-2822953.png"
-            alt="nykaa"
-            style={{
-              height: "100px",
-              width: "100%",
-              display: "block",
-              marginTop: "-20px",
-            }}
-          />
-        </div>
-        <div className={styles.noDrop}>Categories</div>
+        {/* Nykaa Icon */}
+        <Link to="./">
+          <div>
+            <img
+              src="https://cdn.iconscout.com/icon/free/png-256/nykaa-3384872-2822953.png"
+              alt="nykaa"
+              style={{
+                height: "100px",
+                width: "100%",
+                display: "block",
+                marginTop: "-20px",
+              }}
+            />
+          </div>
+        </Link>
+
+
+        {/* Dropdown/No Dropdown Nav Links */}
+        <div className={styles.noDrop}>Categories</div>  
         <div className={styles.dropdown}>
           <div className={styles.dropbtn}>Brands</div>
           <div className={styles.dropdownContent}>
             <NykaaFashion />
           </div>
         </div>
-
         <div className={styles.dropdown}>
           <div className={styles.dropbtn}>Nykaa Fashion</div>
           <div className={styles.dropdownContent}>
@@ -40,46 +58,64 @@ export const Nav2 = () => {
           </div>
         </div>
         <div className={styles.noDrop}>Nykaa Network</div>
-        {/* <input type="search" placeholder="Search on Nykaa" /> */}
 
-        <div
-          className={styles.searchDiv}
-          style={{
-            float: "left",
-            marginTop: "10px",
-            padding: "0.6%",
-          }}
-        >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0  0 24 24"
-            opacity="48%"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+
+        {/* Search Bar */}
+        <div className={styles.search}>
+          <div
+            className={styles.searchDiv}
+            style={{
+              float: "left",
+              marginTop: "10px",
+              padding: "0.6%",
+            }}
           >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0  0 24 24"
+              opacity="48%"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.54 19.97L16.3 14.73C17.36 13.44 17.99 11.79 17.99 9.99C17.99 5.85 14.64 2.5 10.5 2.5C6.35 2.5 3 5.85 3 9.99C3 14.13 6.35 17.48 10.49 17.48C12.29 17.48 13.94 16.84 15.23 15.79L20.47 21.03C20.62 21.18 20.81 21.25 21 21.25C21.19 21.25 21.38 21.18 21.53 21.03C21.83 20.74 21.83 20.26 21.54 19.97ZM10.49 15.98C7.19 15.98 4.5 13.29 4.5 9.99C4.5 6.69 7.19 4 10.49 4C13.79 4 16.48 6.69 16.48 9.99C16.48 13.3 13.8 15.98 10.49 15.98Z"
+                fill="black"
+              ></path>
+            </svg>
             <path
               d="M21.54 19.97L16.3 14.73C17.36 13.44 17.99 11.79 17.99 9.99C17.99 5.85 14.64 2.5 10.5 2.5C6.35 2.5 3 5.85 3 9.99C3 14.13 6.35 17.48 10.49 17.48C12.29 17.48 13.94 16.84 15.23 15.79L20.47 21.03C20.62 21.18 20.81 21.25 21 21.25C21.19 21.25 21.38 21.18 21.53 21.03C21.83 20.74 21.83 20.26 21.54 19.97ZM10.49 15.98C7.19 15.98 4.5 13.29 4.5 9.99C4.5 6.69 7.19 4 10.49 4C13.79 4 16.48 6.69 16.48 9.99C16.48 13.3 13.8 15.98 10.49 15.98Z"
               fill="black"
             ></path>
-          </svg>
-          <path
-            d="M21.54 19.97L16.3 14.73C17.36 13.44 17.99 11.79 17.99 9.99C17.99 5.85 14.64 2.5 10.5 2.5C6.35 2.5 3 5.85 3 9.99C3 14.13 6.35 17.48 10.49 17.48C12.29 17.48 13.94 16.84 15.23 15.79L20.47 21.03C20.62 21.18 20.81 21.25 21 21.25C21.19 21.25 21.38 21.18 21.53 21.03C21.83 20.74 21.83 20.26 21.54 19.97ZM10.49 15.98C7.19 15.98 4.5 13.29 4.5 9.99C4.5 6.69 7.19 4 10.49 4C13.79 4 16.48 6.69 16.48 9.99C16.48 13.3 13.8 15.98 10.49 15.98Z"
-            fill="black"
-          ></path>
-          {/* <i className="fa fa-light fa-magnifying-glass"  style={{fontSize:"20px", opacity:"48", fill:"grey"}}></i> */}
-          <input
-            type="text"
-            className="search"
-            placeholder="Search on Nykaa"
-            style={{
-              border: "none",
-              width: "150px",
-              outline: "none",
-              background: "transparent",
-            }}
-          />
+            <i
+              className="fa fa-light fa-magnifying-glass"
+              style={{ fontSize: "20px", opacity: "48", fill: "grey" }}
+            ></i>
+            <input
+              type="text"
+              placeholder="Search on Nykaa"
+              onChange={handleFilter}
+              style={{
+                border: "none",
+                width: "150px",
+                outline: "none",
+                background: "transparent",
+              }}
+            />
+          </div>
+          {filterData.length !== 0 && (
+            <div className={styles.searchItems}>
+              {filterData.map((el) => (
+                <Link to={el.path}>
+                  <h4>{el.product_name}</h4>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
+
+
+        {/* Account Icon */}
         <div style={{ display: "flex" }}>
           <svg
             width="24"
@@ -117,7 +153,9 @@ export const Nav2 = () => {
           <span className={styles.acc}>Account</span>
         </div>
 
-        <div className={styles.btn}>
+        
+         {/* Bag Icon*/}
+        <div className={styles.btn} onClick={handleshowBag}>
           <svg
             width="24"
             height="24"
@@ -130,7 +168,7 @@ export const Nav2 = () => {
               fill="black"
             ></path>
           </svg>
-          <span className={styles.cartCount}>1</span>
+          <span className={styles.cartCount}>{cartProducts.length}</span>
         </div>
       </div>
     </div>
