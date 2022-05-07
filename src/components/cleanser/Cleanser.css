@@ -121,7 +121,6 @@ body {
   position: relative;
 }
 
-
 @media only screen and (max-width: 845px) {
   .imgs {
     flex-wrap: nowrap;

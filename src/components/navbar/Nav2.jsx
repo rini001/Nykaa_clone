@@ -5,6 +5,7 @@ import { SearchData } from "../../Data/SearchData";
 import { Link } from "react-router-dom";
 import { Contexts } from "../../contexts/Contexts";
 import { useSelector } from "react-redux";
+import { BeautyAdvice } from "./BeautyAdvice";
 export const Nav2 = () => {
   const [filterData, setFilterdata] = useState([]);
   const handleFilter = (e) => {
@@ -21,7 +22,7 @@ export const Nav2 = () => {
       {/*  Main Navbar Div */}
       <div className={styles.nav}>
         {/* Nykaa Icon */}
-        <Link to="./">
+        <Link to="/">
           <div>
             <img
               src="https://cdn.iconscout.com/icon/free/png-256/nykaa-3384872-2822953.png"
@@ -36,9 +37,8 @@ export const Nav2 = () => {
           </div>
         </Link>
 
-
         {/* Dropdown/No Dropdown Nav Links */}
-        <div className={styles.noDrop}>Categories</div>  
+        <div className={styles.noDrop}>Categories</div>
         <div className={styles.dropdown}>
           <div className={styles.dropbtn}>Brands</div>
           <div className={styles.dropdownContent}>
@@ -54,11 +54,10 @@ export const Nav2 = () => {
         <div className={styles.dropdown}>
           <div className={styles.dropbtn}>Beauty Advice</div>
           <div className={styles.dropdownContent}>
-            <NykaaFashion />
+            <BeautyAdvice />
           </div>
         </div>
         <div className={styles.noDrop}>Nykaa Network</div>
-
 
         {/* Search Bar */}
         <div className={styles.search}>
@@ -114,7 +113,6 @@ export const Nav2 = () => {
           )}
         </div>
 
-
         {/* Account Icon */}
         <div style={{ display: "flex" }}>
           <svg
@@ -153,8 +151,7 @@ export const Nav2 = () => {
           <span className={styles.acc}>Account</span>
         </div>
 
-        
-         {/* Bag Icon*/}
+        {/* Bag Icon*/}
         <div className={styles.btn} onClick={handleshowBag}>
           <svg
             width="24"

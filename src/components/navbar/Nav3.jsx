@@ -31,7 +31,7 @@ export const Nav3 = () => {
               el === "LUXE" ? (
                 <NykaaFashion />
               ) : (
-                <div>hey</div>
+                <div>product details</div>
               )}
             </div>
           </div>

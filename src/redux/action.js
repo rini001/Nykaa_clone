@@ -1,7 +1,9 @@
 export const STORE_DATA = "STORE_DATA";
 export const FILTER_DATA = "FILTER_DATA";
 export const ADD_TO_BAG = "ADD_TO_BAG";
-export const RELOAD_BAG = "RELOAD_BAG";
+export const SAVED_BAG = "SAVED_BAG";
+export const UPDATE_QUANTITY = "UPDATE_QUANTITY";
+export const DELETE_FROM_BAG = "DELETE_FROM_BAG";
 export const storeData = (value) => ({
   type: STORE_DATA,
   payload: value,
@@ -14,8 +16,16 @@ export const addingToBag = (payload) => ({
   type: ADD_TO_BAG,
   payload,
 });
-export const reloadBag = (payload) => ({
-  type: RELOAD_BAG,
+export const savedBag = (payload) => ({
+  type: SAVED_BAG,
+  payload,
+});
+export const updateQuan = (payload) => ({
+  type: UPDATE_QUANTITY,
+  payload,
+});
+export const deleteFromBag = (payload) => ({
+  type: DELETE_FROM_BAG,
   payload,
 });
 export const getData = (dispatch) => {
@@ -36,7 +46,7 @@ export const getCartData = (dispatch) => {
         return response.json();
       })
       .then((res) => {
-        dispatch(reloadBag(res));
+        dispatch(savedBag(res));
       });
   };
 };

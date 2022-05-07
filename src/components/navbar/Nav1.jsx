@@ -1,4 +1,6 @@
 import React, { useContext } from "react";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Contexts } from "../../contexts/Contexts";
 import { Cart } from "../cart/Cart";
@@ -193,7 +195,15 @@ const {showBag,handleshowBag}=useContext(Contexts)
   } else {
       body.setAttribute("style", "overflow: scroll");
   }
-
+  let price = 0;
+  let discont = 0;
+  let off_price = 0;
+  const cartProducts = useSelector((state) => state.cartProducts);
+  for (let item of cartProducts) {
+      price += +item.price * +item.quan;
+      discont += +item.price * +item.quan - +item.off_price * +item.quan;
+      off_price += +item.off_price * +item.quan;
+  }
   return (
     <div>
        {showBag && (
@@ -213,15 +223,15 @@ const {showBag,handleshowBag}=useContext(Contexts)
                                 <div>
                                     <p>
                                         <span>Bag Total</span>
-                                        <span>100</span>
+                                        <span>₹{price}</span>
                                     </p>
                                     <p>
                                         <span>Bag Discount</span>
-                                        <span>100</span>
+                                        <span>-₹{discont}</span>
                                     </p>
                                     <p>
                                         <span>Sub Total</span>
-                                        <span>100</span>
+                                        <span>₹{off_price}</span>
                                     </p>
                                     <p>
                                         <span>Shipping Charge</span>
@@ -229,7 +239,7 @@ const {showBag,handleshowBag}=useContext(Contexts)
                                     </p>
                                     <h3>
                                         <span>Grand Total</span>
-                                        <span>100</span>
+                                        <span>₹{off_price}</span>
                                     </h3>
                                 </div>
                                 <div>
@@ -237,7 +247,7 @@ const {showBag,handleshowBag}=useContext(Contexts)
                                         type="text"
                                         placeholder="Have a coupon?"
                                     />
-                                    <button>Views Coupon</button>
+                                 <button>Views Coupon</button> 
                                     <div></div>
                                 </div>
                             </div>
@@ -245,11 +255,11 @@ const {showBag,handleshowBag}=useContext(Contexts)
                         <footer>
                             <button>
                                 <p>Grand Total:</p>
-                                <p>100</p>
+                                <p>₹{off_price}</p>
                             </button>
-                            <button >
+                            <button ><Link style={{textDecoration:"none",color:"white"}}  to="/login">
                                 Procced ❯
-                            </button>
+                                </Link></button> 
                         </footer>
                     </div>
                 </Div>

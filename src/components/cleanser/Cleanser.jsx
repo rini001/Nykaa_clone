@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -7,6 +7,7 @@ import { Categories, Categories2 } from "./Categories";
 import { useDispatch, useSelector } from "react-redux";
 import { addingToBag, getCartData, getData } from "../../redux/action";
 import { Link } from "react-router-dom";
+import { Navbar } from "../navbar/Navbar";
 const images = [
   "https://images-static.nykaa.com/uploads/bbcd8dfe-1703-46d3-ae16-23d441eefe53.jpg?tr=w-1200,cm-pad_resize",
   "https://images-static.nykaa.com/uploads/d3466326-8979-4679-8635-7efeaf42811f.jpg?tr=w-1200,cm-pad_resize",
@@ -27,6 +28,7 @@ export const Cleanser = () => {
   } else {
     data = filter;
   }
+
   const addtobag = (item) => {
     fetch("http://localhost:8000/cartProducts", {
       method: "POST",
@@ -35,6 +37,7 @@ export const Cleanser = () => {
     })
       .then((response) => response.json())
       .then((res) => dispatch(addingToBag(res)));
+
   };
 
   // console.log("produc:",produc)
@@ -50,6 +53,7 @@ export const Cleanser = () => {
   };
   return (
     <div>
+      <Navbar/>
       <div>Home ❯ Search</div>
       <div className="slideDiv">
         <Slider className="custom1" {...settings}>
@@ -64,31 +68,27 @@ export const Cleanser = () => {
           <Categories />
           <Categories2 />
         </div>
-      <div className="imgs">
+        <div className="imgs">
           {data.map((el) => (
-             
-            <div className="imgs2">
+            <div key={el.id}  className="imgs2">
               <div>
-              <Link to={`./${el.id}`}>
-              
-              <p>FEATURED BESTSELLER</p>
-              <img className="originalImg" src={el.image1} alt="" />
-              <h3>{el.cart_title}</h3>
-              <p>
-                MRP:₹{el.price} {el.off_price} {el.discount} Off
-              </p>
-              <p>Enjoy free gift</p>
-              <p>el.raiting</p>
-              </Link>
+                <Link  to={`./${el.id}`} style={{textDecoration:"none",color:"grey"}}>
+                  <p className="link" >FEATURED BESTSELLER</p>
+                  <img className="originalImg" src={el.image1} alt="" />
+                  <h3>{el.cart_title}</h3>
+                  <p>
+                    <span  style={{textDecoration:"line-through",color:"#fc2779"}}>MRP:₹{el.price}</span> {el.price-el.off_price} {el.discount} Off
+                  </p>
+                  <p>Enjoy free gift</p>
+                  <p>reviews</p>
+                </Link>
               </div>
-              <button className="btn1" onClick={() => addtobag(el)}>
-                Add to bag
+          <button className="btn1" onClick={() => addtobag(el)}>
+               ADD TO BAG
               </button>
             </div>
-         
           ))}
         </div>
-       
       </div>
     </div>
   );

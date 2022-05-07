@@ -20,7 +20,7 @@
 .dropdownContent {
   display: none;
   position: absolute;
-  padding: 100px;
+  /* padding: 100px; */
   background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -59,8 +59,8 @@
 
 /* Search */
 .search{
-  border: 2px solid red;
- margin: auto;
+  /* border: 2px solid red; */
+ /* margin: auto; */
 }
 .searchDiv {
   border-radius: 5px;
@@ -71,9 +71,9 @@
 }
 .searchItems {
   width: 100%;
-  position: relative;
-  margin-top: 100px;
-  border: 2px solid black;
+  /* position: relative; */
+  /* margin-top: 100px; */
+  /* border: 2px solid black; */
 }
 h4 {
   color: black;

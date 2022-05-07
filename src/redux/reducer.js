@@ -1,4 +1,4 @@
-import { ADD_TO_BAG, FILTER_DATA, STORE_DATA, RELOAD_BAG } from "./action";
+import { ADD_TO_BAG, FILTER_DATA, STORE_DATA, SAVED_BAG, UPDATE_QUANTITY,DELETE_FROM_BAG,} from "./action";
 
 const initState = {
   products: [{}],
@@ -23,11 +23,32 @@ export const reducer = (store = initState, { type, payload }) => {
         ...store,
         cartProducts: [...store.cartProducts, payload],
       };
-    case RELOAD_BAG:
+    case SAVED_BAG:
       return {
         ...store,
         cartProducts: payload,
       };
+      case UPDATE_QUANTITY:
+            let updatedarr = [...store.cartProducts];
+
+            updatedarr.map((ele) => {
+                if (ele.id === payload.id) {
+                    ele.quan =payload.val;
+                }
+            });
+
+            return {
+                ...store,
+                cartProducts: updatedarr,
+            };
+            case DELETE_FROM_BAG:
+            const updated_arr = store.cartProducts.filter((item) => {
+                return item.id !== payload;
+            });
+            return {
+                ...store,
+                cartProducts: updated_arr,
+            };
     default:
       return store;
   }

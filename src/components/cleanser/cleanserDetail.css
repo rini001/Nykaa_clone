@@ -1,0 +1,48 @@
+.div0 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.div1 {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: white;
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+}
+.imgDiv {
+  padding: 80px;
+  border-right: 1px solid rgba(101, 119, 134, 0.22);
+}
+.bagAndpin {
+  padding: 80px;
+  column-gap: 140px;
+  display: flex;
+  justify-content: right;
+}
+.footerDiv {
+  justify-content: first baseline;
+  align-items: end;
+}
+.div2 {
+  display: grid;
+  justify-content: end;
+  align-items: baseline;
+}
+h1 {
+  width: 40ch;
+}
+.btnbag {
+  width: 150%;
+  padding: 15px;
+  background: #fc2779;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: larger;
+  border: 0px;
+}
+.change {
+  margin-top: 20px;
+  height: fit-content;
+}

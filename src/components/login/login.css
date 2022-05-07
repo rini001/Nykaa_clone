@@ -1,0 +1,256 @@
+.div01 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  height: 30rem;
+}
+.modal {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  height: 10rem;
+  /* border: 2px solid pink; */
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  height: 32rem;
+  border-radius: 20px;
+  row-gap: 30px;
+  margin-top: 30px;
+}
+.cross {
+  font-weight:bold;
+  font-size: larger;
+padding: 10px;
+}
+.modal0 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.checkoutNav {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  display: flex;
+  gap: 1%;
+  width: 100%;
+  background-color: #fff;
+  /* border: 2px solid black; */
+  justify-content: center;
+  align-items: center;
+}
+.checkoutNav > div {
+  border-bottom: 2px solid white;
+  /* border: 2px solid black; */
+}
+.checkoutNav > div > h2 {
+  padding-top: 6px;
+}
+.checkoutImg {
+  width: 6.5rem;
+  margin-top: 1rem;
+  /* border: 2px solid black; */
+}
+.checks {
+  display: flex;
+  column-gap: 20px;
+  /* border: 2px solid black;  */
+}
+.checkDiv1 {
+  border-right: 1px solid #ebebeb;
+
+  border-left: 1px solid #ebebeb;
+}
+.checkDiv2 {
+  border-right: 1px solid #ebebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid black; */
+  /* margin-left: -100px; */
+}
+
+.checkDiv3 {
+  border-right: 1px solid #ebebeb;
+}
+.checkSecondDiv {
+    margin-top: 20px;
+  justify-content: center;
+  align-items: start;
+  display: flex;
+  /* border: 2px solid black; */
+  column-gap: 30px;
+}
+.login1 {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  height: 3rem;
+  width: 15rem;
+  background-color: #fff;
+  color: #fc2779;
+display: grid;
+justify-content: center;
+align-items: center;
+}
+.login2 {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  height: 3rem;
+  width: 30rem;
+  height: 28rem;
+  background-color: #fff;
+  border-bottom: 1px solid grey;
+  text-align: left;
+}
+.loginDiv {
+  /* border-bottom: 1px solid grey; */
+  border-bottom: 1px solid #ebebeb;
+  
+
+  padding: 15px;
+}
+.card {
+  width: 15%;
+}
+.modal2 {
+  border-bottom: 1px solid #ebebeb;
+  display: flex;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 130px;
+}
+.enter {
+  width: 100%;
+  padding: 15px;
+  background: #fc2779;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: larger;
+  border: 0px;
+}
+.inpAndproceed{
+    display: grid;
+    row-gap: 100px;
+}
+.inp>input{
+    width: 17rem;
+    height: 2.6rem;
+}
+.proceed{
+    width: 70%;
+  padding: 15px;
+  background: #fc2779;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: larger;
+  border: 0px;
+}
+.otpDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.otpDiv>div>input{
+    width: 13rem;
+    height: 1.8rem;
+    border-width: 0 0 2px;
+    border-color: blue
+}
+.otpDiv>div>input:focus{
+    border-color: red;
+    outline: none;
+}
+.verify{
+    width: 50%;
+    padding: 15px;
+    background: #fc2779;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: larger;
+    border: 0px;
+}
+.address1{
+    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  height: 3rem;
+  width: 25rem;
+  height: 30rem;
+  background-color: #fff;
+  text-align: left;
+  padding: 30px;
+
+
+}
+.formclass{
+    /* border: 2px solid black; */
+    display: grid;
+    row-gap: 4px;
+    margin-top: 15px;
+}
+.ship{
+    width: 100%;
+    padding: 10px;
+    background: #fc2779;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: larger;
+    border: 0px;
+    margin-top: 5px;
+}
+.formclass>input{
+    width: 100%;
+    height: 1.8rem;
+    border-width: 0 0 1px;
+    border-color: #ebebeb;
+}
+.formclass>input:focus{
+    border-color: red;
+    outline: none;
+}
+.addrsBox>input{
+    width: 100%;
+    height: 4rem;
+    border-width: 1px;
+    border-color: #ebebeb;
+}
+.addrsBox>input:focus{
+    border-color: red;
+    outline:none
+}
+.edit{
+    border-bottom: 1px solid #ebebeb;
+    color:#fc2779
+}
+.payDiv1{
+display: flex;
+column-gap: 50px;
+}
+.payDiv2{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; 
+    background-color: white;
+}
+.payDiv3{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; 
+    background-color: white;
+}
+.payDiv4{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; 
+    background-color: white;
+}
+.payDiv2>div{
+  border-bottom: 1px solid #ebebeb;
+  padding: 20px;
+}
+.payDiv3>div{
+  padding: 20px;
+}

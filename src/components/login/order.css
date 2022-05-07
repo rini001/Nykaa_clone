@@ -1,0 +1,12 @@
+.orderdiv0{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+}
+.continueShopping{
+    color:#fc2779
+}
+.orderdiv0>p{
+    width: 35ch;
+}

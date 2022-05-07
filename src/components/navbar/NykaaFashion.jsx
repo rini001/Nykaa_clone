@@ -1,12 +1,19 @@
 import React from "react";
 // import { Path } from "react-router-dom";
 // import { Brands } from './Brands'
-import styles from "./NykaaFashion.module.css";
 
-export const NykaaFashion = ({ status, handleToggle }) => {
+
+export const NykaaFashion =()=> {
     return (
    <div>
-       <div className={styles.brand}>d</div>
+       <div >
+           <h5>Sleep Shirts</h5>
+           <h5>Cetaphil</h5>
+           <h5>Sleep Shirts</h5>
+           <h5>Sleep Shirts</h5>
+           <h5>Sleep Shirts</h5>
+           <h5>Sleep Shirts</h5>
+       </div>
    </div>
     );
 };

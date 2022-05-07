@@ -67,7 +67,7 @@ export const Categories2 = () => {
   return (
     <div className="forMargin">
       <div onChange={filterfunc}>
-        <Toggle2 name="brand">
+        <Toggle2 name="Brand">
           <div>
             <div className="first">
               <label htmlFor="Straighteners">Ponds</label>
@@ -92,7 +92,7 @@ export const Categories2 = () => {
           </div>
         </Toggle2>
       </div>
-      <Toggle2>
+      <Toggle2 name="Price">
         <div>
           <div className="first">
             <label htmlFor="Straighteners">Relevance</label>
@@ -124,7 +124,7 @@ export const Categories2 = () => {
           </div>
         </div>
       </Toggle2>
-      <Toggle2>
+      <Toggle2 name="Discount">
         <div>
           <div className="first">
             <label htmlFor="Straighteners">Relevance</label>
@@ -156,7 +156,7 @@ export const Categories2 = () => {
           </div>
         </div>
       </Toggle2>
-      <Toggle2>
+      <Toggle2 name="Avg Customer Rating">
         <div>
           <div className="first">
             <label htmlFor="Straighteners">Relevance</label>
@@ -188,7 +188,7 @@ export const Categories2 = () => {
           </div>
         </div>
       </Toggle2>
-      <Toggle2>
+      <Toggle2 name="Preference">
         <div>
           <div className="first">
             <label htmlFor="Straighteners">Relevance</label>
@@ -220,7 +220,7 @@ export const Categories2 = () => {
           </div>
         </div>
       </Toggle2>
-      <Toggle2>
+      <Toggle2 name="Concern">
         <div>
           <div className="first">
             <label htmlFor="Straighteners">Relevance</label>
@@ -252,7 +252,7 @@ export const Categories2 = () => {
           </div>
         </div>
       </Toggle2>
-      <Toggle2>
+      <Toggle2 name="Skin Type">
         <div>
           <div className="first">
             <label htmlFor="Straighteners">Relevance</label>
@@ -284,7 +284,7 @@ export const Categories2 = () => {
           </div>
         </div>
       </Toggle2>
-      <Toggle2>
+      <Toggle2 name="Formulation">
         <div>
           <div className="first">
             <label htmlFor="Straighteners">Relevance</label>
@@ -316,7 +316,7 @@ export const Categories2 = () => {
           </div>
         </div>
       </Toggle2>
-      <Toggle2>
+      <Toggle2 name="Gender">
         <div>
           <div className="first">
             <label htmlFor="Straighteners">Relevance</label>
@@ -348,7 +348,7 @@ export const Categories2 = () => {
           </div>
         </div>
       </Toggle2>
-      <Toggle2>
+      <Toggle2 name="Conscious">
         <div>
           <div className="first">
             <label htmlFor="Straighteners">Relevance</label>
@@ -380,7 +380,7 @@ export const Categories2 = () => {
           </div>
         </div>
       </Toggle2>
-      <Toggle2>
+      <Toggle2 name="Ingredient">
         <div>
           <div className="first">
             <label htmlFor="Straighteners">Relevance</label>
