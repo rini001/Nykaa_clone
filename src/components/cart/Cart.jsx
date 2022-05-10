@@ -61,7 +61,7 @@ export const Cart = () => {
   const dispatch = useDispatch();
   const changeQuantity = (val, id) => {
     axios
-      .patch(`http://localhost:8000/cartProducts/${id}`, {
+      .patch(`https://nykaa-db01.herokuapp.com/cartProducts/${id}`, {
         quan: val,
       })
       .then((res) => dispatch(updateQuan({ val, id })));
