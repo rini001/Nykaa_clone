@@ -68,7 +68,7 @@ export const Cart = () => {
   };
   const deleteItem = (id) => {
     axios
-        .delete(`http://localhost:8000/cartProducts/${id}`)
+        .delete(`https://nykaa-db01.herokuapp.com/cartProducts/${id}`)
         .then((res) => dispatch(deleteFromBag(id)));
 };
   return (
