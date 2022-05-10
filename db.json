@@ -118,5 +118,19 @@
       "quan": 1
     }
   ],
-  "cartProducts": []
+  "cartProducts": [
+    {
+      "card_title": "Kiehl's Ultra Facial Cleanser",
+      "title": "Kiehl's Ultra Facial Cleanser",
+      "rating": "4.2",
+      "ratingNum": "2751",
+      "price": "587",
+      "off_price": "99",
+      "discount": "20%",
+      "image1": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/3/6/3605975099676_mini.jpg",
+      "brand_name": "Kiehls",
+      "id": 2,
+      "quan": 1
+    }
+  ]
 }

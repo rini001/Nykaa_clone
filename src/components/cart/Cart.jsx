@@ -124,7 +124,7 @@ export const Cart = () => {
                 >
                   ₹{+el.price * +el.quan}
                 </span>
-                <span>₹{+el.off_price * +el.quan}</span>
+                <span>₹{+(el.price-el.off_price )* +el.quan}</span>
               </div>
             </div>
           </Div>

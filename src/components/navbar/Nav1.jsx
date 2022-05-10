@@ -265,7 +265,7 @@ const {showBag,handleshowBag}=useContext(Contexts)
                 </Div>
             )}
       <div className={styles.mainDiv}>
-        <div>abc</div>
+        <div>FLAT 10% OFF</div>
         <div
           style={{
             display: "flex",

@@ -23,7 +23,7 @@ export const CleanserDetail = () => {
   const { userId } = useParams();
   const [cleanser, cleanserDetail] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:8000/products/${userId}`, {
+    fetch(`https://nykaa-db01.herokuapp.com/products/${userId}`, {
       method: "GET",
       headers: { "Content-type": "application/json;charset=UTF-8" },
     })

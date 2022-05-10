@@ -23,6 +23,7 @@
   font-weight:bold;
   font-size: larger;
 padding: 10px;
+cursor: pointer;
 }
 .modal0 {
   display: grid;

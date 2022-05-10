@@ -30,7 +30,7 @@ export const Cleanser = () => {
   }
 
   const addtobag = (item) => {
-    fetch("http://localhost:8000/cartProducts", {
+    fetch("https://nykaa-db01.herokuapp.com/cartProducts", {
       method: "POST",
       body: JSON.stringify(item),
       headers: { "Content-type": "application/json; charset=UTF-8" },

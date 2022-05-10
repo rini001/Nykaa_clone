@@ -30,7 +30,7 @@ export const deleteFromBag = (payload) => ({
 });
 export const getData = (dispatch) => {
   return (dispatch) => {
-    fetch("http://localhost:8000/products")
+    fetch("https://nykaa-db01.herokuapp.com/products")
       .then((response) => {
         return response.json();
       })
@@ -41,7 +41,7 @@ export const getData = (dispatch) => {
 };
 export const getCartData = (dispatch) => {
   return (dispatch) => {
-    fetch("http://localhost:8000/cartProducts")
+    fetch("https://nykaa-db01.herokuapp.com/cartProducts")
       .then((response) => {
         return response.json();
       })

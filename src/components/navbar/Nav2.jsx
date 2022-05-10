@@ -38,7 +38,7 @@ export const Nav2 = () => {
         </Link>
 
         {/* Dropdown/No Dropdown Nav Links */}
-        <div className={styles.noDrop}>Categories</div>
+        <Link style={{textDecoration:"none"}} to="/cleanser"><div className={styles.noDrop}>Categories</div></Link>
         <div className={styles.dropdown}>
           <div className={styles.dropbtn}>Brands</div>
           <div className={styles.dropdownContent}>
