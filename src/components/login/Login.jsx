@@ -62,7 +62,7 @@ export const Login = () => {
   const checkOutItem = () => {
     for (let i = 0; i < cartProducts.length; i++) {
       axios
-        .delete(`http://localhost:8000/cartProducts/${cartProducts[i].id}`)
+        .delete(`https://nykaa-db01.herokuapp.com/cartProducts/${cartProducts[i].id}`)
         .then((res) => dispatch(deleteFromBag(cartProducts[i].id)));
     }
     alert("Order Placed Successfully!!  Thank You for Ordering");
