@@ -8,6 +8,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { addingToBag, getCartData, getData } from "../../redux/action";
 import { Link } from "react-router-dom";
 import { Navbar } from "../navbar/Navbar";
+import { Footer } from "../home/Footer";
+
 const images = [
   "https://images-static.nykaa.com/uploads/bbcd8dfe-1703-46d3-ae16-23d441eefe53.jpg?tr=w-1200,cm-pad_resize",
   "https://images-static.nykaa.com/uploads/d3466326-8979-4679-8635-7efeaf42811f.jpg?tr=w-1200,cm-pad_resize",
@@ -90,6 +92,7 @@ export const Cleanser = () => {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

@@ -23,7 +23,7 @@ export const RoutesComponents = () => {
                 <Route path="/cleanser" element={<Cleanser />}></Route>
                 <Route path="/cleanser/:userId" element={<CleanserDetail />}></Route>
                 <Route path="/login" element={<Login/>}></Route>
-                 <Route path="/order" element={<OrderSuccessful/>}></Route>
+                <Route path="/order" element={<OrderSuccessful/>}></Route>
           </Routes>
           </div>
           

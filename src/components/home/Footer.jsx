@@ -28,41 +28,56 @@ export const Footer = () => {
       <div>
           <h2>Nykaa</h2>
           <div>
-              <div>a</div>
-              <div>a</div>
-              <div>a</div>
+              <div>Who are we?</div>
+              <div>Careers</div>
+              <div>Authenticity</div>
+              <div>Press</div>
+              <div>Testimonials</div>
+              <div>Nykaa CSR</div>
           </div>
       </div>
       <div>
-          <h2>Nykaa</h2>
+          <h2>Help</h2>
           <div>
-              <div>a</div>
-              <div>a</div>
-              <div>a</div>
+          <div>Contact Us</div>
+              <div>Careers</div>
+              <div>Authenticity</div>
+              <div>Press</div>
+              <div>Testimonials</div>
+              <div>Nykaa CSR</div>
           </div>
       </div>
       <div>
-          <h2>Nykaa</h2>
+          <h2>Inspire Me</h2>
           <div>
-              <div>a</div>
-              <div>a</div>
-              <div>a</div>
+          <div>Who are we?</div>
+              <div>Careers</div>
+              <div>Authenticity</div>
+              <div>Press</div>
+              <div>Testimonials</div>
+              <div>Nykaa CSR</div>
           </div>
       </div>
       <div>
-          <h2>Nykaa</h2>
+          <h2>Quick Links</h2>
           <div>
-              <div>a</div>
-              <div>a</div>
-              <div>a</div>
+          <div>Who are we?</div>
+              <div>Careers</div>
+              <div>Authenticity</div>
+              <div>Press</div>
+              <div>Testimonials</div>
+              <div>Nykaa CSR</div>
           </div>
       </div>
       <div>
-          <h2>Nykaa</h2>
+          <h2>Top Categories</h2>
           <div>
-              <div>a</div>
-              <div>a</div>
-              <div>a</div>
+          <div>Who are we?</div>
+              <div>Careers</div>
+              <div>Authenticity</div>
+              <div>Press</div>
+              <div>Testimonials</div>
+              <div>Nykaa CSR</div>
           </div>
       </div>
        </div>

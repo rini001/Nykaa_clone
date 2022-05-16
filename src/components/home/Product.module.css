@@ -8,6 +8,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 color: #fc2779;
+
 }
 .div1{
     margin-top: 50px;
@@ -27,16 +28,18 @@ color: #fc2779;
     display: flex;
     justify-content: center;
     align-items:flex-end;
+
+
 }
 .brand:hover{
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-
 }
 .last{
     margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 .lastImg{
     background-size: auto;
@@ -74,5 +77,7 @@ color: #fc2779;
     justify-content: center;
     align-items:flex-end;
       width: 180px;
+
+
     }
   }

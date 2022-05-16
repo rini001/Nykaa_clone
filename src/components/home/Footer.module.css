@@ -15,6 +15,10 @@
  padding: 10px;
  background-color: rgb(63, 65, 77);
  margin-top: 40px;
+
+}
+.warning{
+  width: 70%;
 }
 .div1{
     /* border:2px solid black; */
@@ -23,7 +27,6 @@
     align-items: center;
     justify-content: center;
     height: 40px;
-    
 }
 .inp{
     color: rgb(255, 255, 255);
