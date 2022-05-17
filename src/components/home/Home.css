@@ -1,19 +1,7 @@
-* {
+/* * {
   box-sizing: border-box;
-}
-/* .slick-arrow.slick-prev {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  z-index: 10;
-  border: 2px solid black;
-  color: rgb(10, 2, 1);
-}
-.slick-arrow:hover.slick-prev:hover {
-  visibility: visible;
-  border: 2px solid black;
-  color: rgb(10, 2, 1);
 } */
+
 .slick-prev:before {
   content: "<";
 
@@ -58,9 +46,12 @@
 }
 
 .slideImg {
-  width: 100%;
+  width: 100% ;
   margin-top: 8px;
+  /* border: 2px solid black; */
 }
+
+
 .flexImg {
   display: flex;
   justify-content: center;

@@ -28,7 +28,9 @@ export const Home = () => {
     <div className="slideImg">
        <Slider className="slideImg" {...settings}>
         {images.map((el,i) => (
+          
           <img key={i} src={el} alt="" />
+         
         ))}
       </Slider>
       </div>
