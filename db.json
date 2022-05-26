@@ -135,18 +135,18 @@
   ],
   "login":[
    { 
-     "uname":"Ross",
+     "uname":"Rachael",
      "phone": "9898989898",
      "otp":"Math.random()"
    },
    { 
-    "uname":"Joey",
+    "uname":"Monica",
     "phone": "7973412258",
     "otp":"4444"
   },
   { 
     "uname":"Phoebe",
-    "phone": "123",
+    "phone": "7575757575",
     "otp":"3333"
   }
   ]

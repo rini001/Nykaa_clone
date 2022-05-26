@@ -62,7 +62,7 @@ export const Login = () => {
     setValue(e.target.value);
   };
   useEffect(() => {
-    fetch(`http://localhost:8000/login`, {
+    fetch(`https://nykaa-db01.herokuapp.com/login`, {
       method: "GET",
       headers: {
         "content-type": "application/json; charset=utf-8",
