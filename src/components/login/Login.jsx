@@ -105,7 +105,7 @@ export const Login = () => {
           } 
     }
     if(count===0){
-        alert("not reg")
+        alert("User is not registered, Please Login with registered mobile number...")
     }
   };
   const handleOTPchange = (e) => {
