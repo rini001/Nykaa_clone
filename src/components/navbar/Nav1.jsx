@@ -201,8 +201,9 @@ const {showBag,handleshowBag}=useContext(Contexts)
   const cartProducts = useSelector((state) => state.cartProducts);
   for (let item of cartProducts) {
       price += +item.price * +item.quan;
-      discont += +item.price * +item.quan - +item.off_price * +item.quan;
-      off_price += +item.off_price * +item.quan;
+    
+      discont +=  +item.off_price * +item.quan;
+      off_price += price-discont
   }
   return (
     <div>
