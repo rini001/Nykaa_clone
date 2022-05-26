@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from "./Footer.module.css"
+import fut from "./fut.png"
 export const Footer = () => {
   return (
     <div>
@@ -81,8 +82,7 @@ export const Footer = () => {
           </div>
       </div>
        </div>
-        <div className={styles.whiteDiv}></div>
-        <div className={styles.pinkDiv}></div>
+        <img src={fut} alt="" />
     </div>
   )
 }
