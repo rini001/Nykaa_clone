@@ -57,7 +57,6 @@ const Div = styled.div`
 export const Cart = () => {
 
   const cartProducts = useSelector((state) => state.cartProducts);
-  console.log(cartProducts);
   const dispatch = useDispatch();
   const changeQuantity = (val, id) => {
     axios
@@ -74,8 +73,8 @@ export const Cart = () => {
   return (
     <div>
       <>
-        {cartProducts.map((el) => (
-          <Div key={el.id}>
+        {cartProducts.map((el,i) => (
+          <Div key={i}>
             <div className="card_div1">
               <div>
                 <img src={el.image1} alt="" />

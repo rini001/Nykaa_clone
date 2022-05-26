@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteFromBag, getCartData } from "../../redux/action";
+import { deleteFromBag, getCartData, profile, userName } from "../../redux/action";
 import { Cart } from "../cart/Cart";
 import "./login.css";
 import facebook from "./facebook.png";
@@ -8,72 +8,117 @@ import guest from "./guest.png";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 export const Login = () => {
-  const [payment,setPayment]=useState(true)
-  const handlePayment=()=>{
-    setPayment(true)
-  }
-  const handlePayment1=()=>{
-    setPayment(false)
-  }
+  const [payment, setPayment] = useState(true);
+  const handlePayment = () => {
+    setPayment(true);
+  };
+  const handlePayment1 = () => {
+    setPayment(false);
+  };
   let price = 0;
   let discont = 0;
   let off_price = 0;
   const cartProducts = useSelector((state) => state.cartProducts);
   for (let item of cartProducts) {
-      price += +item.price * +item.quan;
-      discont += +item.price * +item.quan - +item.off_price * +item.quan;
-      off_price += +item.off_price * +item.quan;
+    price += +item.price * +item.quan;
+    discont += +item.price * +item.quan - +item.off_price * +item.quan;
+    off_price += +item.off_price * +item.quan;
   }
-  const [page, setPage] = useState(0);
-  const [otpPin,setOtpPin]=useState("")
-  const [number,setNumber]=useState("")
-  const verify = () => {
-    if(otpPin==="5555"){
-    setPage(1);
-    setPop(!pop);
-    }
-    else{
-      alert("wrong OTP")
-    }
-  };
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCartData());
   }, []);
+  
+
+  const navigate = useNavigate();
+  const checkOutItem = () => {
+    for (let i = 0; i < cartProducts.length; i++) {
+      axios
+        .delete(
+          `https://nykaa-db01.herokuapp.com/cartProducts/${cartProducts[i].id}`
+        )
+        .then((res) => dispatch(deleteFromBag(cartProducts[i].id)));
+    }
+    alert("Order Placed Successfully!!  Thank You for Ordering");
+    navigate("/order");
+  };
+  const name=useSelector((state)=>state.uname)
+  // console.log(name)
+  // const [uname,setUname]=useState("")
+  const [page, setPage] = useState(0);
+  const [otpPin, setOtpPin] = useState("");
+  const [data, setData] = useState([]);
+  const [value, setValue] = useState("");
   const [pop, setPop] = useState(true);
+  const [otp, hasOtp] = useState(false);
+  const [ot, setOt] = useState("");
   const handlePop = () => {
     setPop(!pop);
   };
   const handleShip = () => {
     setPage(2);
   };
-  const [otp, hasOtp] = useState(false);
-  const handleOTP = () => {
-    if(number==="7973412258"){
-    hasOtp(!otp);
-    alert("Hi Rini Your OTP is 5555");
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
+  useEffect(() => {
+    fetch(`http://localhost:8000/login`, {
+      method: "GET",
+      headers: {
+        "content-type": "application/json; charset=utf-8",
+      },
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((res) => {
+        setData(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+  const handleLogin = () => {
+    // data.forEach((elem) => {
+    //   if (elem.phone === value) {
+    //     // alert(`your otp is ${elem.otp}`);
+    //     setOtpPin(elem.otp);
+    //     hasOtp(!otp);
+    //     console.log(1)
+    //   }
+    //   else{
+    //     console.log(2)
+    //   }
+    // });
+   
+    let count=0
+    for(const key in data){
+      
+      if (data[key].phone === value) {
+        dispatch(userName(data[key].uname))
+        dispatch(profile(data[key].image))
+            // setUname(data[key].uname)
+            alert(`your otp is ${data[key].otp}`);
+            setOtpPin(data[key].otp);
+            hasOtp(!otp);
+            count++
+          } 
     }
-    else{
-      alert("User is not registered,Login with registered mobile number")
+    if(count===0){
+        alert("not reg")
     }
   };
-  // console.log(otp);
-  const navigate = useNavigate();
-  const checkOutItem = () => {
-    for (let i = 0; i < cartProducts.length; i++) {
-      axios
-        .delete(`https://nykaa-db01.herokuapp.com/cartProducts/${cartProducts[i].id}`)
-        .then((res) => dispatch(deleteFromBag(cartProducts[i].id)));
-    }
-    alert("Order Placed Successfully!!  Thank You for Ordering");
-    navigate("/order");
+  const handleOTPchange = (e) => {
+    setOt(e.target.value);
   };
-  const handleChange=(e)=>{
-   setNumber(e.target.value)
-  }
-  const handleOTPchange=(e)=>{
-    setOtpPin(e.target.value)
-  }
+  const verify = () => {
+    if (otpPin === ot) {
+      setPage(1);
+      setPop(!pop);
+    } else {
+      alert("wrong OTP");
+    }
+  };
   return (
     <div>
       {/* NAVBAR */}
@@ -123,38 +168,18 @@ export const Login = () => {
                 <div>
                   <div className="edit">Edit Address</div>
                   <form action="" className="formclass">
-                    <input type="text" name="County" value={"India"} />
+                    <input type="text" name="County" placeholder="country" />
                     <br />
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="name"
-                    />
+                    <input type="text" name="name" placeholder="name" />
                     <br />
-                    <input
-                      type="email"
-                      name="Email"
-                      placeholder="Email"
-                    />
+                    <input type="email" name="Email" placeholder="Email" />
                     <br />
-                    <input
-                      type="number"
-                      name="number"
-                      placeholder="Number"
-                    />
+                    <input type="number" name="number" placeholder="Number" />
                     <br />
-                    <input
-                      type="number"
-                      name="pin"
-                      placeholder="Postal Code"
-                    />
+                    <input type="number" name="pin" placeholder="Postal Code" />
                     <br />
                     <div className="addrsBox">
-                      <input
-                        type="text"
-                        name="address"
-                        placeholder="Address"
-                      />
+                      <input type="text" name="address" placeholder="Address" />
                     </div>
                   </form>
                   <div>
@@ -165,61 +190,66 @@ export const Login = () => {
                 </div>
               </div>
             ) : (
-             <div>
-               <h4>CHOOSE PAYMENT METHOD</h4>
-               <div className="payDiv1">
-                 <div className="payDiv2">
-                   <div>Preferred Payment Methods</div>
-                   <div>Credit/Debit Card</div>
-                   <div onClick={handlePayment}>UPI</div>
-                   <div>GooglePay</div>
-                   <div>Net Banking</div>
-                   <div>Mobile Wallets</div>
-                   <div onClick={handlePayment1}>Cash on Delivery</div>
-                   <div>Gift Card</div>
-                 </div>
-                 <div className="payDiv3">
-                  {payment?(<div><div>UPI PAYMENT</div>
-                   <button onClick={checkOutItem}>PAY BY UPI</button></div>): (<div><div>CASH ON DELIVERY</div>
-                   <button onClick={checkOutItem}>Pay  ₹ by cash</button></div>)}
-                 </div>
-                 <div className="payDiv4">
-                 <div className="total_price">
-                                <div>Payment Details</div>
-                                <div>
-                                    <p>
-                                        <span>Bag Total</span>
-                                        <span>₹{price}</span>
-                                    </p>
-                                    <p>
-                                        <span>Bag Discount</span>
-                                        <span>-₹{discont}</span>
-                                    </p>
-                                    <p>
-                                        <span>Sub Total</span>
-                                        <span>₹{off_price}</span>
-                                    </p>
-                                    <p>
-                                        <span>Shipping Charge</span>
-                                        <span>🛈 Free</span>
-                                    </p>
-                                    <h3>
-                                        <span>Grand Total</span>
-                                        <span>₹{off_price}</span>
-                                    </h3>
-                                </div>
-                                <div>
-                                    <input
-                                        type="text"
-                                        placeholder="Have a coupon?"
-                                    />
-                                 <button>Views Coupon</button> 
-                                    <div></div>
-                                </div>
-                            </div>
-                 </div>
-               </div>
-             </div>
+              <div>
+                <h4>CHOOSE PAYMENT METHOD</h4>
+                <div className="payDiv1">
+                  <div className="payDiv2">
+                    <div>Preferred Payment Methods</div>
+                    <div>Credit/Debit Card</div>
+                    <div onClick={handlePayment}>UPI</div>
+                    <div>GooglePay</div>
+                    <div>Net Banking</div>
+                    <div>Mobile Wallets</div>
+                    <div onClick={handlePayment1}>Cash on Delivery</div>
+                    <div>Gift Card</div>
+                  </div>
+                  <div className="payDiv3">
+                    {payment ? (
+                      <div>
+                        <div>UPI PAYMENT</div>
+                        <button onClick={checkOutItem}>PAY BY UPI</button>
+                      </div>
+                    ) : (
+                      <div>
+                        <div>CASH ON DELIVERY</div>
+                        <button onClick={checkOutItem}>Pay ₹ by cash</button>
+                      </div>
+                    )}
+                  </div>
+                  <div className="payDiv4">
+                    <div className="total_price">
+                      <div>Payment Details</div>
+                      <div>
+                        <p>
+                          <span>Bag Total</span>
+                          <span>₹{price}</span>
+                        </p>
+                        <p>
+                          <span>Bag Discount</span>
+                          <span>-₹{discont}</span>
+                        </p>
+                        <p>
+                          <span>Sub Total</span>
+                          <span>₹{off_price}</span>
+                        </p>
+                        <p>
+                          <span>Shipping Charge</span>
+                          <span>🛈 Free</span>
+                        </p>
+                        <h3>
+                          <span>Grand Total</span>
+                          <span>₹{off_price}</span>
+                        </h3>
+                      </div>
+                      <div>
+                        <input type="text" placeholder="Have a coupon?" />
+                        <button>Views Coupon</button>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             )}
             {page === 0 || page === 1 ? (
               <div className="card">
@@ -243,11 +273,16 @@ export const Login = () => {
             </div>
             <div className="inpAndproceed">
               <div className="inp">
-                <input type="text" onChange={handleChange} placeholder="enter your number" />
+                <input
+                  type="text"
+                  value={value}
+                  onChange={handleChange}
+                  placeholder="enter your number"
+                />
               </div>
               {otp === false ? (
                 <div>
-                  <button className="proceed" onClick={handleOTP}>
+                  <button className="proceed" onClick={handleLogin}>
                     PROCEED
                   </button>
                 </div>
@@ -258,11 +293,16 @@ export const Login = () => {
             {otp ? (
               <div className="otpDiv">
                 <div>
-                  Welcome back Rini, Please enter the OTP sent on your phone (Be
+                  Welcome back {name}, Please enter the OTP sent on your phone (Be
                   sure to check your spam folder)
                 </div>
                 <div>
-                  <input type="text" onChange={handleOTPchange} placeholder="enter your PIN" />
+                  <input
+                    type="text"
+                    value={ot}
+                    onChange={handleOTPchange}
+                    placeholder="enter your PIN"
+                  />
                 </div>
                 <button className="verify" onClick={verify}>
                   VERIFY

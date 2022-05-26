@@ -1,9 +1,11 @@
-import { ADD_TO_BAG, FILTER_DATA, STORE_DATA, SAVED_BAG, UPDATE_QUANTITY,DELETE_FROM_BAG,} from "./action";
+import { ADD_TO_BAG, FILTER_DATA, STORE_DATA, SAVED_BAG, UPDATE_QUANTITY,DELETE_FROM_BAG, USER_NAME, PROFILE,} from "./action";
 
 const initState = {
   products: [{}],
   filter: [],
   cartProducts: [{}],
+  uname:"",
+  profile:""
 };
 
 export const reducer = (store = initState, { type, payload }) => {
@@ -28,6 +30,16 @@ export const reducer = (store = initState, { type, payload }) => {
         ...store,
         cartProducts: payload,
       };
+      case USER_NAME:
+        return {
+          ...store,
+          uname: payload,
+        };
+        case PROFILE:
+          return {
+            ...store,
+          profile: payload,
+          };
       case UPDATE_QUANTITY:
             let updatedarr = [...store.cartProducts];
 

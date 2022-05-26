@@ -27,7 +27,7 @@ export const Footer = () => {
         <div className={styles.greyDiv}>
       <div>
           <h2>Nykaa</h2>
-          <div>
+          <div style={{display:"grid" , rowGap:"15px"}}>
               <div>Who are we?</div>
               <div>Careers</div>
               <div>Authenticity</div>
@@ -38,7 +38,7 @@ export const Footer = () => {
       </div>
       <div>
           <h2>Help</h2>
-          <div>
+          <div style={{display:"grid" , rowGap:"15px"}}>
           <div>Contact Us</div>
               <div>Careers</div>
               <div>Authenticity</div>
@@ -49,7 +49,7 @@ export const Footer = () => {
       </div>
       <div>
           <h2>Inspire Me</h2>
-          <div>
+          <div style={{display:"grid" , rowGap:"15px"}}>
           <div>Who are we?</div>
               <div>Careers</div>
               <div>Authenticity</div>
@@ -60,7 +60,7 @@ export const Footer = () => {
       </div>
       <div>
           <h2>Quick Links</h2>
-          <div>
+          <div style={{display:"grid" , rowGap:"15px"}}>
           <div>Who are we?</div>
               <div>Careers</div>
               <div>Authenticity</div>
@@ -71,7 +71,7 @@ export const Footer = () => {
       </div>
       <div>
           <h2>Top Categories</h2>
-          <div>
+          <div style={{display:"grid" , rowGap:"15px"}}>
           <div>Who are we?</div>
               <div>Careers</div>
               <div>Authenticity</div>

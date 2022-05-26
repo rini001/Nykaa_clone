@@ -15,7 +15,16 @@ export const Nav2 = () => {
     });
     setFilterdata(newFilter);
   };
+  const name=useSelector((state)=>state.uname)
+  const profile=useSelector((state)=>state.profile)
+
+  const handleLogout=()=>{
+    // console.log(name)
+    alert("name")
+  }
   const cartProducts = useSelector((state) => state.cartProducts);
+  
+
   const { handleshowBag } = useContext(Contexts);
   return (
     <div>
@@ -148,7 +157,8 @@ export const Nav2 = () => {
               fill-opacity="0.92"
             ></path>
           </svg>
-          <span className={styles.acc}>Account</span>
+          {/* <img src={profile} alt="" height="30px" width="30px" style={{borderRadius:"50%"}} /> */}
+          <span style={{pointer:"cursor"}} onClick={handleLogout} className={styles.acc}>{name}</span>
         </div>
 
         {/* Bag Icon*/}

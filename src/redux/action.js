@@ -4,6 +4,8 @@ export const ADD_TO_BAG = "ADD_TO_BAG";
 export const SAVED_BAG = "SAVED_BAG";
 export const UPDATE_QUANTITY = "UPDATE_QUANTITY";
 export const DELETE_FROM_BAG = "DELETE_FROM_BAG";
+export const USER_NAME="USER_NAME"
+export const PROFILE="PROFILE"
 export const storeData = (value) => ({
   type: STORE_DATA,
   payload: value,
@@ -28,6 +30,14 @@ export const deleteFromBag = (payload) => ({
   type: DELETE_FROM_BAG,
   payload,
 });
+export const userName = (value) => ({
+  type: USER_NAME,
+  payload: value,
+});
+export const profile = (value) => ({
+  type: PROFILE,
+  payload: value,
+});
 export const getData = (dispatch) => {
   return (dispatch) => {
     fetch("https://nykaa-db01.herokuapp.com/products")
@@ -50,3 +60,16 @@ export const getCartData = (dispatch) => {
       });
   };
 };
+
+// export const login =(dispatch)=>{
+//   return (dispatch)=>{
+//     fetch(`http://localhost:8000/login`, {
+//     })
+//       .then((response) => {
+//         return response.json();
+//       })
+//       .then((res) => {
+//         dispatch(userName(res));
+//       })
+//   }
+// }

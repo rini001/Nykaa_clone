@@ -79,7 +79,7 @@ export const Cleanser = () => {
                   <img className="originalImg" src={el.image1} alt="" />
                   <h3>{el.cart_title}</h3>
                   <p>
-                    <span  style={{textDecoration:"line-through",color:"#fc2779"}}>MRP:₹{el.price}</span> {el.price-el.off_price} {el.discount} Off
+                    <span  style={{textDecoration:"line-through",color:"#fc2779"}}>MRP:₹{el.price}</span> <span style={{color:"black"}}>{el.price-el.off_price}</span> {el.discount} Off
                   </p>
                   <p>Enjoy free gift</p>
                   <p>reviews</p>
